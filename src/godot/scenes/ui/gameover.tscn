@@ -1,0 +1,122 @@
+[gd_scene load_steps=10 format=3 uid="uid://08xaxbdeucfu"]
+
+[ext_resource type="Script" uid="uid://bj2jos6b27nvd" path="res://scripts/misc/ui/gameover.gd" id="1_58jn4"]
+[ext_resource type="FontFile" uid="uid://c34par46en5an" path="res://resources/fonts/upheavtt.ttf" id="1_sxuf3"]
+[ext_resource type="FontFile" uid="uid://barxmho7mf7vs" path="res://resources/fonts/jersey.ttf" id="2_valnw"]
+[ext_resource type="Texture2D" uid="uid://prf7hb38rgb1" path="res://assets/personnages/Fuyu/png/emote_fuyu_pleure.png" id="3_valnw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_58jn4"]
+bg_color = Color(0.101086, 0.022585, 0.214499, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pfak"]
+bg_color = Color(0.603922, 0.380392, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3fwn"]
+bg_color = Color(0.402447, 0.0013775, 0.615001, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nh7px"]
+bg_color = Color(0.331738, 0.0369261, 0.015204, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yj70m"]
+bg_color = Color(0.415686, 0.101961, 0.0666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Game Over screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_58jn4")
+
+[node name="purple_background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_58jn4")
+
+[node name="game_over" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -270.0
+offset_right = 270.0
+offset_bottom = 97.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.67451, 0.0705882, 0, 1)
+theme_override_fonts/font = ExtResource("1_sxuf3")
+theme_override_font_sizes/font_size = 102
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -216.0
+offset_right = 115.5
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EmoteFuyuPleure" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(112, 115)
+scale = Vector2(0.428125, 0.428125)
+texture = ExtResource("3_valnw")
+
+[node name="buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = 37.0
+offset_right = 145.0
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="retry" type="Button" parent="buttons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_valnw")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/hover = SubResource("StyleBoxFlat_4pfak")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g3fwn")
+text = "Réessayer"
+
+[node name="exit" type="Button" parent="buttons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_valnw")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/hover = SubResource("StyleBoxFlat_nh7px")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yj70m")
+text = "Quitter"
+
+[connection signal="pressed" from="buttons/retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="buttons/exit" to="." method="_on_exit_pressed"]

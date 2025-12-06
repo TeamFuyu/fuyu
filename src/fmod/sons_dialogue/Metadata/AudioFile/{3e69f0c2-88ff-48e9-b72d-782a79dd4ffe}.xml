@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{3e69f0c2-88ff-48e9-b72d-782a79dd4ffe}">
+		<property name="assetPath">
+			<value>playful_navigation_04.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.44990929705215421</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ee203cac-ceee-48d3-8b20-0aeb0050c050}</destination>
+		</relationship>
+	</object>
+</objects>

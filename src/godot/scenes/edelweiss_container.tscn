@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c0skquhn3okbu"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="edelweiss_container" type="HBoxContainer" parent="CanvasLayer"]
+z_index = 2
+offset_left = -3.0
+offset_top = -5.0
+offset_right = 84.0
+offset_bottom = 81.0

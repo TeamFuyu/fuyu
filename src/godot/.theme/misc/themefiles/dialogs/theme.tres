@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://lyk2w1phdn2i"]
+
+[ext_resource type="FontFile" uid="uid://barxmho7mf7vs" path="res://.theme/fonts/jersey.ttf" id="1_1futr"]
+
+[resource]
+default_font = ExtResource("1_1futr")
+Button/font_sizes/font_size = 33
+TabBar/fonts/font = ExtResource("1_1futr")

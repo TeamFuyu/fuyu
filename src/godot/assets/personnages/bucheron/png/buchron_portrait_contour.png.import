@@ -3,21 +3,23 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxirbvpixt03u"
-path="res://.godot/imported/buchron_portrait_contour.png-2ec30dea23cf1e3e7182d781100991f1.ctex"
+path="res://.godot/imported/buchron_portrait_contour.png-c8771c03d0372d9a86039108f56afd27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Personnages/bucheron/png/buchron_portrait_contour.png"
-dest_files=["res://.godot/imported/buchron_portrait_contour.png-2ec30dea23cf1e3e7182d781100991f1.ctex"]
+source_file="res://assets/personnages/bucheron/png/buchron_portrait_contour.png"
+dest_files=["res://.godot/imported/buchron_portrait_contour.png-c8771c03d0372d9a86039108f56afd27.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

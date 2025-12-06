@@ -15,8 +15,8 @@ font = ExtResource("1_74d6c")
 font_size = 150
 font_color = Color(0.720245, 0.00039602, 0.720379, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8s3bs"]
-bg_color = Color(0.742648, 0.000165185, 0.658835, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igtc1"]
+bg_color = Color(0.564393, 8.83199e-05, 0.49931, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -29,15 +29,8 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igtc1"]
-bg_color = Color(0.564393, 8.83199e-05, 0.49931, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khbhx"]
-bg_color = Color(0.545769, 0.393004, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8s3bs"]
+bg_color = Color(0.742648, 0.000165185, 0.658835, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -45,6 +38,13 @@ corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_74d6c"]
 bg_color = Color(0.331049, 2.86137e-05, 0.290485, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khbhx"]
+bg_color = Color(0.545769, 0.393004, 0, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -94,19 +94,19 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_8s3bs")
 theme_override_font_sizes/font_size = 80
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8s3bs")
-theme_override_styles/hover = SubResource("StyleBoxFlat_hhnvu")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_igtc1")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_igtc1")
 theme_override_styles/normal = SubResource("StyleBoxFlat_igtc1")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_igtc1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_igtc1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hhnvu")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8s3bs")
 text = "Nouvelle partie"
 
 [node name="load" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_8s3bs")
 theme_override_font_sizes/font_size = 80
-theme_override_styles/hover = SubResource("StyleBoxFlat_khbhx")
 theme_override_styles/normal = SubResource("StyleBoxFlat_74d6c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_khbhx")
 text = "Charger"
 
 [node name="Icon" type="Sprite2D" parent="VBoxContainer"]

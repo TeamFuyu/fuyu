@@ -18,7 +18,10 @@
 [Godot](https://godotengine.org/download/)
 
 [GitHub version en ligne](https://github.com/Fuyu-Corporation/Fuyu) : permet d'accéder à tous les fichier, d'en rajouter et de les avoir en commun sur le site
-[Git](https://git-scm.com/downloads) : pareil mais permet d'avoir les fichiers en dur son ordinateur (pas négligeable pour les devs). Voir : [Tuto](https://www.malekal.com/git-clone-utilisation-et-exemples/). Si vous préférez une interface graphique, Git GUI s'installe automatiquement sous Windows. Sinon, vous avez des gestionnaires Git comme GitHub Desktop (peu recommandable car lourd sur les ressource, écrit en JavaScript et tourne sous ElectronJS)
+
+[Git](https://git-scm.com/downloads) : pareil mais permet d'avoir les fichiers en dur son ordinateur (pas négligeable pour les devs). Voir : 
+
+[Tuto](https://www.malekal.com/git-clone-utilisation-et-exemples/). Si vous préférez une interface graphique, Git GUI s'installe automatiquement sous Windows. Sinon, vous avez des gestionnaires Git comme GitHub Desktop (peu recommandable car lourd sur les ressource, écrit en JavaScript et tourne sous ElectronJS)
 
 ## Apprendre à programmer avec Godot
 

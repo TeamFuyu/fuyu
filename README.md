@@ -8,8 +8,8 @@
 
 ## Ce Repository
   Bienvenue sur le dépôt Github Fuyu réservé aux devs ! Que voulez-vous faire ?
-  * [Télécharger des assets](src/Godot Fuyu/assets)
-  * [Accéder au code](Godot Fuyu), écrit en GDScript avec Godot
+  * [Télécharger des assets](src/godot/assets/)
+  * [Accéder au code](src/godot), écrit en GDScript avec Godot
   * [Accéder à l'espace commun](https://kdrive.infomaniak.com/app/share/762323/a321fd80-b8dc-4626-bb4c-00debbe0a534)
 
 
@@ -18,7 +18,10 @@
 [Godot](https://godotengine.org/download/)
 
 [GitHub version en ligne](https://github.com/Fuyu-Corporation/Fuyu) : permet d'accéder à tous les fichier, d'en rajouter et de les avoir en commun sur le site
-[Git](https://git-scm.com/downloads) : pareil mais permet d'avoir les fichiers en dur son ordinateur (pas négligeable pour les devs). Voir : [Tuto](https://www.malekal.com/git-clone-utilisation-et-exemples/). Si vous préférez une interface graphique, Git GUI s'installe automatiquement sous Windows. Sinon, vous avez des gestionnaires Git comme GitHub Desktop (peu recommandable car lourd sur les ressource, écrit en JavaScript et tourne sous ElectronJS)
+
+[Git](https://git-scm.com/downloads) : pareil mais permet d'avoir les fichiers en dur son ordinateur (pas négligeable pour les devs). Voir : 
+
+[Tuto](https://www.malekal.com/git-clone-utilisation-et-exemples/). Si vous préférez une interface graphique, Git GUI s'installe automatiquement sous Windows. Sinon, vous avez des gestionnaires Git comme GitHub Desktop (peu recommandable car lourd sur les ressource, écrit en JavaScript et tourne sous ElectronJS)
 
 ## Apprendre à programmer avec Godot
 

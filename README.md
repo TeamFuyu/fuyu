@@ -8,8 +8,8 @@
 
 ## Ce Repository
   Bienvenue sur le dépôt Github Fuyu réservé aux devs ! Que voulez-vous faire ?
-  * [Télécharger des assets](src/Godot Fuyu/assets)
-  * [Accéder au code](Godot Fuyu), écrit en GDScript avec Godot
+  * [Télécharger des assets](src/godot/assets/)
+  * [Accéder au code](src/godot), écrit en GDScript avec Godot
   * [Accéder à l'espace commun](https://kdrive.infomaniak.com/app/share/762323/a321fd80-b8dc-4626-bb4c-00debbe0a534)
 
 

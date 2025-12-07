@@ -124,10 +124,6 @@ func stand():
 func _ready():
 	var _timer = $DashTimer
 	get_node("DashTimer").timeout.connect(_on_DashTimer_timeout)
-	dial.p(0,"bonjour")
-	dial.p(2,"salut")
-	dial.dialog_visible()
-	print("salut")
 
 func _on_DashTimer_timeout():
 	in_dash = false

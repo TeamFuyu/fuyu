@@ -4,6 +4,7 @@ extends Node
 @onready var mort=false
 @export var max_health: int = 5
 @export var current_health: int = 5
+@export var dial_running=false
 
 #Characters properties
 @export var characters = ["Fuyu", "Vieux"]

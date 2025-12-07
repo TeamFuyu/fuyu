@@ -4,6 +4,7 @@ extends Control
 @export var empty_heart_texture: Texture2D
 
 @onready var health_container: HBoxContainer = $edelweiss/CanvasLayer/edelweiss_container
+@onready var dial=get_node("Dialogue/CanvasLayer/Panel/").get_script()
 
 var invincibility = false
 

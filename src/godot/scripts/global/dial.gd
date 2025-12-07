@@ -2,9 +2,8 @@ extends Panel
 
 var dbox_text: Array
 var dbox_characters: Array
-var current_line: int = 1
+var current_line: int = 0
 var character: int
-var ls = LabelSettings.new()
 
 func _ready():
 	$".".visible = false
@@ -20,10 +19,10 @@ func show_next_dialogue_line():
 		print(dbox_characters)
 		print(dbox_characters[current_line])
 		print(global.characters[dbox_characters[current_line]])
-		$Label.text = global.characters[dbox_characters[current_line]]
-		$RichTextLabel.text = dbox_text[current_line]
-		$TextureRect.texture = load("res://assets/portraits/"+global.characters_textures[dbox_characters[current_line]])
-		$Label.add_theme_color_override("font_color", Color(global.characters_colors[dbox_characters[current_line]]))
+		%ChLabel.text = global.characters[dbox_characters[current_line]]
+		%DialLabel.text = dbox_text[current_line]
+		%ChTexture.texture = load("res://assets/portraits/"+global.characters_textures[dbox_characters[current_line]])
+		%ChLabel.add_theme_color_override("font_color", Color(global.characters_colors[dbox_characters[current_line]]))
 		current_line += 1
  
 func close():
@@ -40,8 +39,8 @@ func p(c, text):
 	dbox_characters.append(c)
 
 func show_dialogue():
-	$RichTextLabel.text = dbox_text[0]
-	$Label.text = global.characters[dbox_characters[0]]
-	$TextureRect.texture = load("res://assets/portraits/"+global.characters_textures[dbox_characters[0]])
-	$Label.add_theme_color_override("font_color", Color(global.characters_colors[dbox_characters[0]]))
+	%DialLabel.text = dbox_text[0]
+	%ChLabel.text = global.characters[dbox_characters[0]]
+	%ChTexture.texture = load("res://assets/portraits/"+global.characters_textures[dbox_characters[0]])
+	%ChLabel.add_theme_color_override("font_color", Color(global.characters_colors[dbox_characters[0]]))
 	dialog_visible()

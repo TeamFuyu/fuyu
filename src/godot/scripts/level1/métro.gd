@@ -6,7 +6,7 @@ extends AnimatedSprite2D
 @onready var ap = $"."
 
 func _process(_delta):
-	if portée($".") :
+	if global.portée(player,$".",PORTEE,DECALAGE_X,DECALAGE_Y) :
 		ap.play("open_door")
 		if Input.is_action_just_pressed("interact"):
 			get_tree().change_scene_to_file("res://scenes/levels/level2.tscn")
@@ -22,6 +22,3 @@ func _process(_delta):
 			ap.play_backwards("open_door")
 		else:
 			ap.play("default")
-		
-func portée(personnage)->bool:
-	return int(player.position.x) > personnage.position.x-PORTEE+DECALAGE_X and int(player.position.x) < personnage.position.x+PORTEE+DECALAGE_X and int(player.position.y) > personnage.position.y-PORTEE+DECALAGE_Y and int(player.position.y) < personnage.position.y+PORTEE+DECALAGE_Y 

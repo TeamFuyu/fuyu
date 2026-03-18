@@ -5,8 +5,9 @@ extends Node
 @export var max_health: int = 5
 @export var current_health: int = 5
 @export var dial_running=false
+@export var help_box=false
 
-#Characters properties
+#Characters properties : tableau
 @export var characters = ["Fuyu", "Vieux"]
 @export var characters_textures = ["fuyu_portrait_contour/0.png", "tous sprites de vieux/0.png"]
 @export var characters_colors = ["purple", "white"]

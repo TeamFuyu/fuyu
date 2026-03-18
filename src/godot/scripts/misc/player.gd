@@ -87,6 +87,8 @@ func _physics_process(delta):
 
 		var _timer = $DashTimer
 		$DashTimer.start()
+	if Input.is_action_just_pressed("interact"):
+		global.help_box=false
 
 	move_and_slide()
 	update_animations(direction)

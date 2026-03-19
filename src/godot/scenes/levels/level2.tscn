@@ -5,6 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dhb35e35c6dvt" path="res://assets/décor/Tileset/salle de test/tileset_underground_LE_BON.png" id="2_71baw"]
 [ext_resource type="Texture2D" uid="uid://cwrpbv1n7ljhk" path="res://assets/décor/Tileset/salle de test/tileset_base .png" id="3_niitk"]
 [ext_resource type="Texture2D" uid="uid://btauqgsp028cr" path="res://assets/décor/Tileset/0_ruines enfouies/tileset_aztèque_v2.png" id="4_d5djh"]
+[ext_resource type="Texture2D" uid="uid://1i7116ufffsq" path="res://assets/personnages/être de feu/etre de feu_ferme_les_bras.png" id="6_dj4wq"]
+[ext_resource type="Texture2D" uid="uid://bj7naac6l2046" path="res://assets/personnages/être de feu/etre de feu_lamb.png" id="7_k0mew"]
+[ext_resource type="Script" uid="uid://c4lkfj7kcg4l" path="res://scripts/level2/être_de_feu.gd" id="8_b0vvs"]
+[ext_resource type="Texture2D" uid="uid://dgb2e2syv0bf3" path="res://assets/objets/fire/Boule de Feu.png" id="8_k0mew"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d5djh"]
 texture = ExtResource("2_71baw")
@@ -130,6 +134,119 @@ sources/0 = SubResource("TileSetAtlasSource_d5djh")
 sources/2 = SubResource("TileSetAtlasSource_ok6xr")
 sources/1 = SubResource("TileSetAtlasSource_dj4wq")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0vvs"]
+atlas = ExtResource("6_dj4wq")
+region = Rect2(0, 0, 228, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oyk6k"]
+atlas = ExtResource("6_dj4wq")
+region = Rect2(228, 0, 228, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gycjm"]
+atlas = ExtResource("6_dj4wq")
+region = Rect2(456, 0, 228, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8i1lk"]
+atlas = ExtResource("6_dj4wq")
+region = Rect2(0, 228, 228, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgky1"]
+atlas = ExtResource("6_dj4wq")
+region = Rect2(228, 228, 228, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4tpv"]
+atlas = ExtResource("6_dj4wq")
+region = Rect2(456, 228, 228, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkuam"]
+atlas = ExtResource("6_dj4wq")
+region = Rect2(0, 456, 228, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3b2k"]
+atlas = ExtResource("7_k0mew")
+region = Rect2(0, 0, 228, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqrei"]
+atlas = ExtResource("7_k0mew")
+region = Rect2(228, 0, 228, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhrca"]
+atlas = ExtResource("7_k0mew")
+region = Rect2(456, 0, 228, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4eecq"]
+atlas = ExtResource("7_k0mew")
+region = Rect2(0, 228, 228, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3p8y"]
+atlas = ExtResource("7_k0mew")
+region = Rect2(228, 228, 228, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxuut"]
+atlas = ExtResource("7_k0mew")
+region = Rect2(456, 228, 228, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g04qb"]
+atlas = ExtResource("7_k0mew")
+region = Rect2(0, 456, 228, 228)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ida7w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0vvs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oyk6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gycjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8i1lk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hgky1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4tpv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkuam")
+}],
+"loop": false,
+"name": &"arms",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3b2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqrei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhrca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4eecq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3p8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxuut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g04qb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dj4wq"]
+
 [node name="Level2" type="Node2D" unique_id=1179512100]
 script = ExtResource("1_niitk")
 next_scn_left = "res://scenes/levels/level1.tscn"
@@ -143,3 +260,17 @@ use_parent_material = true
 position = Vector2(2, -31)
 tile_map_data = PackedByteArray("AAD+////AAABAAEAAAD9//7/AAABAAEAAAD9////AAABAAEAAADx/wAAAAABAAEAAADt//7/AAABAAEAAADt////AAAAAAAAAADn/wUAAAAAAAAAAADo/wUAAAAAAAAAAADp/wUAAAAAAAAAAADq/wUAAAAAAAAAAADr/wUAAAAAAAAAAADs/wQAAAAAAAAAAADt/wQAAAAAAAAAAADu/wQAAAAAAAAAAADv/wQAAAAAAAAAAADw/wQAAAAAAAAAAADx/wQAAAAAAAAAAADy/wQAAAAAAAAAAADz/wQAAAAAAAAAAAD0/wMAAAAAAAAAAAD1/wMAAAAAAAAAAAD2/wMAAAAAAAAAAAD3/wMAAAAAAAAAAAD4/wMAAAAAAAAAAAD5/wMAAAAAAAAAAAD6/wMAAAAAAAAAAAD7/wMAAAAAAAAAAAD8/wIAAAAAAAAAAAD9/wIAAAAAAAAAAADw/wAAAAABAAEAAADs//7/AAABAAEAAADl//3/AAAAAAAAAADl//7/AAABAAAAAADl////AAAAAAAAAADn////AAABAAAAAADn//7/AAAAAAEAAADg////AAAAAAEAAADg//7/AAABAAAAAADg//3/AAAAAAEAAADm/wUAAAABAAAAAADl/wUAAAABAAAAAADk/wUAAAABAAAAAADj/wUAAAAAAAAAAADi/wUAAAABAAAAAADh/wUAAAAAAAAAAADg/wUAAAAAAAEAAADf/wUAAAAAAAEAAADe/wUAAAABAAAAAADd//z/AAAAAAEAAADc//z/AAABAAAAAADb//z/AAAAAAAAAADa//z/AAAAAAAAAADZ//z/AAABAAAAAADZ/w4AAAAAAAAAAADa/w4AAAAAAAEAAADb/w4AAAAAAAEAAADc/w4AAAAAAAAAAADd/w4AAAAAAAAAAADe/w4AAAAAAAEAAADf/w4AAAABAAEAAADg/w4AAAAAAAAAAADh/w4AAAABAAAAAADi/w4AAAAAAAEAAADj/w4AAAAAAAEAAADk/w4AAAAAAAAAAADl/w4AAAAAAAAAAADm/w4AAAAAAAEAAADn/w4AAAAAAAAAAADo/w4AAAAAAAEAAADp/w4AAAAAAAAAAADq/w4AAAAAAAAAAADr/w4AAAAAAAEAAADs/w4AAAAAAAAAAADt/w4AAAAAAAAAAADu/w4AAAAAAAEAAADv/w4AAAABAAAAAADw/w4AAAAAAAEAAADx/w4AAAAAAAEAAADy/w4AAAAAAAEAAADz/w4AAAAAAAAAAAD0/w4AAAAAAAAAAAD1/w4AAAAAAAAAAAD2/w4AAAAAAAAAAAD3/w4AAAAAAAEAAAD4/w4AAAAAAAAAAAD5/w4AAAAAAAAAAAD6/w4AAAAAAAAAAAD7/w4AAAABAAAAAAD8/w4AAAAAAAAAAAD9/w4AAAAAAAEAAAD+/w4AAAAAAAAAAADZ/w0AAAAAAAAAAADf/w8AAAAAAAAAAADh/w8AAAABAAEAAADj/w8AAAABAAEAAADl/w8AAAABAAEAAAAMAAEAAAABAAAAAAANAAEAAAABAAAAAAAOAAEAAAABAAAAAAAPAAEAAAABAAAAAAAUAAEAAgAAAAAAAAAVAAEAAgABAAAAAAAWAAEAAgABAAAAAAAXAAEAAgABAAAAAAAYAAEAAgACAAAAAAAUAAIAAgADAAEAAAAVAAIAAgAEAAEAAAAWAAIAAgAEAAEAAAAXAAIAAgAEAAEAAAAYAAIAAgAEAAEAAAAZAAIAAgAEAAAAAAAaAAIAAgAFAAAAAAAUAAMAAgAEAAIAAAAVAAMAAgAEAAIAAAAWAAMAAgAEAAIAAAAXAAMAAgAEAAIAAAAYAAMAAgAEAAIAAAAZAAMAAgAEAAIAAAAaAAMAAgAEAAIAAAAaAAAAAgAAAAMAAAAbAAAAAgABAAMAAAAcAAAAAgABAAAAAAAcAAEAAgAAAAEAAAAdAAEAAgABAAEAAAAeAAEAAgABAAEAAAAeAAAAAgABAAAAAAAfAAAAAgABAAAAAAAgAAAAAgABAAAAAAAhAAAAAgABAAAAAAAiAAAAAgABAAAAAAAjAAAAAgABAAAAAAAkAAAAAgABAAAAAAAlAAAAAgABAAAAAAAdAAAAAgABAAAAAAAmAAAAAgABAAAAAAAnAAAAAgABAAAAAAAoAAAAAgABAAAAAAApAAAAAgABAAAAAAAqAAAAAgACAAAAAAAfAAEAAgABAAEAAAAgAAEAAgABAAEAAAAhAAEAAgABAAEAAAAiAAEAAgABAAEAAAAjAAEAAgABAAEAAAAkAAEAAgABAAEAAAAlAAEAAgABAAEAAAAmAAEAAgABAAEAAAAnAAEAAgABAAEAAAAoAAEAAgABAAEAAAApAAEAAgABAAEAAAAqAAEAAgACAAEAAAAcAAIAAgADAAEAAAAqAAIAAgAFAAEAAAApAAIAAgAEAAEAAAAoAAIAAgAEAAEAAAAnAAIAAgAEAAEAAAAmAAIAAgAEAAEAAAAlAAIAAgAEAAEAAAAkAAIAAgAEAAEAAAAjAAIAAgAEAAEAAAAiAAIAAgAEAAEAAAAhAAIAAgAEAAEAAAAgAAIAAgAEAAEAAAAfAAIAAgAEAAEAAAAeAAIAAgAEAAEAAAAdAAIAAgAEAAEAAAAcAAMAAgAEAAIAAAAdAAMAAgAEAAIAAAAeAAMAAgAEAAIAAAAfAAMAAgAEAAIAAAAgAAMAAgAEAAIAAAAhAAMAAgAEAAIAAAAiAAMAAgAEAAIAAAAjAAMAAgAEAAIAAAAkAAMAAgAEAAIAAAAlAAMAAgAEAAIAAAAmAAMAAgAEAAIAAAAnAAMAAgAEAAIAAAAoAAMAAgAEAAIAAAApAAMAAgAEAAIAAAAqAAMAAgAEAAIAAAD3/wAAAgAEAAMAAAD3/wEAAgAEAAMAAAD4/wAAAAAAAAEAAAD4/wEAAgAEAAMAAAD5/wAAAAABAAEAAAD5/wEAAgAEAAMAAAD6/wAAAgAEAAMAAAD6/wEAAgAEAAMAAADq/wAAAQACAAEAAAD//wEAAQAAAAAAAAD//wIAAQAAAAEAAAD//wMAAQAAAAIAAAAAAAEAAQABAAAAAAAAAAIAAQABAAEAAAAAAAMAAQABAAIAAAABAAEAAQABAAAAAAABAAIAAQABAAEAAAABAAMAAQABAAIAAAACAAEAAQABAAAAAAACAAIAAQABAAEAAAACAAMAAQABAAIAAAADAAEAAQABAAAAAAADAAIAAQABAAEAAAADAAMAAQABAAIAAAAEAAAAAQAAAAAAAAAEAAEAAQAAAAEAAAAEAAIAAQABAAEAAAAEAAMAAQABAAIAAAAFAAEAAQABAAEAAAAFAAAAAQABAAAAAAAGAAAAAQABAAAAAAAHAAAAAQABAAAAAAAIAAAAAQABAAAAAAAJAAAAAQABAAAAAAAKAAAAAQABAAAAAAALAAAAAQABAAAAAAAMAAAAAQABAAAAAAANAAAAAQABAAAAAAA=")
 tile_set = SubResource("TileSet_dj4wq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=249558828]
+position = Vector2(433, -2)
+sprite_frames = SubResource("SpriteFrames_ida7w")
+animation = &"arms"
+autoplay = "idle"
+script = ExtResource("8_b0vvs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=724632999]
+texture = ExtResource("8_k0mew")
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="Sprite2D" unique_id=1459311844]
+position = Vector2(-243, -84)
+shape = SubResource("CircleShape2D_dj4wq")

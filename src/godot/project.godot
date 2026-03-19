@@ -27,7 +27,6 @@ config/icon="uid://lbau6tqn834b"
 [autoload]
 
 global="*res://scripts/global/global.gd"
-Dial="*res://scripts/global/dial.gd"
 
 [dialogic]
 

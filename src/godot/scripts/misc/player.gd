@@ -100,13 +100,13 @@ func _physics_process(delta):
 		global.help_box=false
 
 	move_and_slide()
-	update_animations(direction)
+	update_animations("attack",direction)
 
 func above_head_is_empty() -> bool:
 	var result = !crouchraycast_1.is_colliding() && !crouchraycast_2.is_colliding()
 	return result
 
-func update_animations(direction):
+func update_animations(anim_name:String,direction):
 	if is_crouching:
 		if direction == 0:
 			ap.play("crouch")

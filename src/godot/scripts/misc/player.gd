@@ -12,6 +12,7 @@ var tween: Tween
 var dash_velocity := 0
 var can_dash = true
 var in_dash = false
+var is_attacking = false
 const SPEED := 600.0
 const DASH := 2000
 
@@ -69,9 +70,10 @@ func _physics_process(delta):
 			stand()
 			stuck_under_object = false
 
-	if Input.is_action_just_pressed("dash") and can_dash:
-		can_dash = false
-		in_dash = true
+	if Input.is_action_just_pressed("dash"):
+		if can_dash:
+			can_dash = false
+			in_dash = true
 		if direction != 0:
 			dash_velocity = DASH
 		else:
@@ -79,6 +81,13 @@ func _physics_process(delta):
 				velocity.x = DASH * 3
 			else:
 				velocity.x = -DASH * 3
+	if Input.is_action_just_released("dash"):
+		in_dash = false
+	
+	if Input.is_action_just_pressed("attack"):
+		is_attacking = true
+	elif Input.is_action_just_released("attack"):
+		is_attacking = false
 
 		if tween:
 			tween.stop()
@@ -105,6 +114,8 @@ func update_animations(direction):
 			ap.play("crouch_walk")
 	elif in_dash:
 		ap.play("dash")
+	elif is_attacking:
+		ap.play_backwards("attack")
 	elif is_on_floor():
 		if direction == 0:
 			ap.play("idle")
@@ -128,52 +139,55 @@ func _ready():
 	get_node("DashTimer").timeout.connect(_on_DashTimer_timeout)
 
 func _on_DashTimer_timeout():
-	in_dash = false
+	#in_dash = false
 	can_dash = true
 	$DashTimer.stop()
+	
 
-func save():
-	var save_dict = {
-		"filename": get_scene_file_path(),
-		"parent": get_parent().get_path(),
-		"pos_x": position.x,
-		"pos_y": position.y,
-	}
-	return save_dict
+#func save():
+	#var save_dict = {
+		#"filename": get_scene_file_path(),
+		#"parent": get_parent().get_path(),
+		#"pos_x": position.x,
+		#"pos_y": position.y,
+	#}
+	#return save_dict
 
-func save_game():
-	var save_file = FileAccess.open("user://savegame.save", FileAccess.WRITE)
-	var save_nodes = get_tree().get_nodes_in_group("Persist")
-	for node in save_nodes:
-		if node.scene_file_path.is_empty():
-			print("persistent node '%s' is not an instanced scene, skipped" % node.name)
-			continue
-		if !node.has_method("save"):
-			print("persistent node '%s' is missing a save() function, skipped" % node.name)
-			continue
-		var node_data = node.call("save")
-		var json_string = JSON.stringify(node_data)
-		save_file.store_line(json_string)
+#func save_game():
+	#var save_file = FileAccess.open("user://savegame.save", FileAccess.WRITE)
+	#var save_nodes = get_tree().get_nodes_in_group("Persist")
+	#for node in save_nodes:
+		#if node.scene_file_path.is_empty():
+			#print("persistent node '%s' is not an instanced scene, skipped" % node.name)
+			#continue
+		#if !node.has_method("save"):
+			#print("persistent node '%s' is missing a save() function, skipped" % node.name)
+			#continue
+		#var node_data = node.call("save")
+		#var json_string = JSON.stringify(node_data)
+		#save_file.store_line(json_string)
 
-func load_game():
-	if not FileAccess.file_exists("user://savegame.save"):
-		return
-	var save_nodes = get_tree().get_nodes_in_group("Persist")
-	for i in save_nodes:
-		i.queue_free()
-	var save_file = FileAccess.open("user://savegame.save", FileAccess.READ)
-	while save_file.get_position() < save_file.get_length():
-		var json_string = save_file.get_line()
-		var json = JSON.new()
-		var parse_result = json.parse(json_string)
-		if not parse_result == OK:
-			print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
-			continue
-		var node_data = json.data
-		var new_object = load(node_data["filename"]).instantiate()
-		get_node(node_data["parent"]).add_child(new_object)
-		new_object.position = Vector2(node_data["pos_x"], node_data["pos_y"])
-		for i in node_data.keys():
-			if i == "filename" or i == "parent" or i == "pos_x" or i == "pos_y":
-				continue
-			new_object.set(i, node_data[i])
+#func load_game():
+	#if not FileAccess.file_exists("user://savegame.save"):
+		#return
+	#var save_nodes = get_tree().get_nodes_in_group("Persist")
+	#for i in save_nodes:
+		#i.queue_free()
+	#var save_file = FileAccess.open("user://savegame.save", FileAccess.READ)
+	#while save_file.get_position() < save_file.get_length():
+		#var json_string = save_file.get_line()
+		#var json = JSON.new()
+		#var parse_result = json.parse(json_string)
+		#if not parse_result == OK:
+			#print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+			#continue
+		#var node_data = json.data
+		#var new_object = load(node_data["filename"]).instantiate()
+		#get_node(node_data["parent"]).add_child(new_object)
+		#new_object.position = Vector2(node_data["pos_x"], node_data["pos_y"])
+		#for i in node_data.keys():
+			#if i == "filename" or i == "parent" or i == "pos_x" or i == "pos_y":
+				#continue
+			#new_object.set(i, node_data[i])
+
+ # Replace with function body.

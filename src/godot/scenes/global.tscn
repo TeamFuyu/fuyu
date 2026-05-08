@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://lgkmb0gv28nu" path="res://assets/ui/eidelweiss/eidelweiss_solo.png" id="2_5rvs8"]
 [ext_resource type="Shape2D" uid="uid://w0hls8sanokw" path="res://resources/cshape/fuyu_idle_cshape.tres" id="2_mmhw1"]
 [ext_resource type="Texture2D" uid="uid://bsr8aghrtriyk" path="res://assets/personnages/Fuyu/png/fuyu_dash_poseok.png" id="3_7htx0"]
+[ext_resource type="Texture2D" uid="uid://bcsb8qoqvh77i" path="res://assets/personnages/Fuyu/png/fuyu_attaque_posok.png" id="3_b18l6"]
 [ext_resource type="Texture2D" uid="uid://4mwvfokqdi8l" path="res://assets/personnages/Fuyu/png/fuyu_down_walk_plusbas_poseok.png" id="3_r0mmt"]
 [ext_resource type="Texture2D" uid="uid://rqp3dckptuoj" path="res://assets/ui/eidelweiss/eidelweiss_solo_n.png" id="3_wokaa"]
 [ext_resource type="Texture2D" uid="uid://co6tg74ash2fs" path="res://assets/personnages/Fuyu/png/fuyu_down_walk_poseok.png" id="4_7upwp"]
@@ -16,6 +17,30 @@
 [ext_resource type="PackedScene" uid="uid://c0skquhn3okbu" path="res://scenes/edelweiss_container.tscn" id="13_2se67"]
 [ext_resource type="PackedScene" uid="uid://by4ejbo8ir8wu" path="res://scenes/ui/dial.tscn" id="15_e7lx3"]
 [ext_resource type="PackedScene" uid="uid://84l5dimmcipw" path="res://scenes/ui/help_box.tscn" id="16_3q7h5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apua7"]
+atlas = ExtResource("3_b18l6")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fq2qc"]
+atlas = ExtResource("3_b18l6")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntttm"]
+atlas = ExtResource("3_b18l6")
+region = Rect2(0, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itjjb"]
+atlas = ExtResource("3_b18l6")
+region = Rect2(0, 768, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suoh8"]
+atlas = ExtResource("3_b18l6")
+region = Rect2(0, 960, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uyp2"]
+atlas = ExtResource("3_b18l6")
+region = Rect2(0, 1152, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2se67"]
 atlas = ExtResource("3_r0mmt")
@@ -45,29 +70,9 @@ region = Rect2(0, 768, 192, 192)
 atlas = ExtResource("4_7upwp")
 region = Rect2(0, 960, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sa46t"]
-atlas = ExtResource("3_7htx0")
-region = Rect2(192, 192, 192, 192)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ckyir"]
 atlas = ExtResource("3_7htx0")
 region = Rect2(0, 384, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cosda"]
-atlas = ExtResource("6_slpow")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aukfu"]
-atlas = ExtResource("6_slpow")
-region = Rect2(0, 192, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e21jp"]
-atlas = ExtResource("6_slpow")
-region = Rect2(0, 384, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nr4ij"]
-atlas = ExtResource("6_slpow")
-region = Rect2(0, 576, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ys2up"]
 atlas = ExtResource("4_w241f")
@@ -133,8 +138,47 @@ region = Rect2(0, 1152, 192, 192)
 atlas = ExtResource("4_urjoy")
 region = Rect2(0, 576, 192, 192)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_cosda"]
+atlas = ExtResource("6_slpow")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aukfu"]
+atlas = ExtResource("6_slpow")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e21jp"]
+atlas = ExtResource("6_slpow")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr4ij"]
+atlas = ExtResource("6_slpow")
+region = Rect2(0, 576, 192, 192)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_24liw"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apua7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fq2qc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntttm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itjjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suoh8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5uyp2")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2se67")
@@ -168,26 +212,11 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sa46t")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_ckyir")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cosda")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_aukfu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e21jp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nr4ij")
 }],
 "loop": false,
 "name": &"dash",
-"speed": 6.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -350,4 +379,5 @@ layout_mode = 1
 [node name="SOS Box" parent="UI" unique_id=1654785063 instance=ExtResource("16_3q7h5")]
 layout_mode = 1
 
+[connection signal="animation_finished" from="Fuyu/AnimatedSprite2D" to="Fuyu" method="update_animations"]
 [connection signal="timeout" from="UI/MagicPotionTimer" to="UI" method="_on_magic_potion_timer_timeout"]

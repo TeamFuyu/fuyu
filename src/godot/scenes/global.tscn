@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c0skquhn3okbu" path="res://scenes/edelweiss_container.tscn" id="13_2se67"]
 [ext_resource type="PackedScene" uid="uid://by4ejbo8ir8wu" path="res://scenes/ui/dial.tscn" id="15_e7lx3"]
 [ext_resource type="PackedScene" uid="uid://84l5dimmcipw" path="res://scenes/ui/help_box.tscn" id="16_3q7h5"]
+[ext_resource type="Script" uid="uid://ccpvwvxc0if1b" path="res://scripts/global/mobspawn.gd" id="18_korfd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_apua7"]
 atlas = ExtResource("3_b18l6")
@@ -378,6 +379,11 @@ layout_mode = 1
 
 [node name="SOS Box" parent="UI" unique_id=1654785063 instance=ExtResource("16_3q7h5")]
 layout_mode = 1
+
+[node name="MobInit" type="Node2D" parent="." unique_id=440512868]
+script = ExtResource("18_korfd")
+
+[node name="Timer" type="Timer" parent="MobInit" unique_id=2016815078]
 
 [connection signal="animation_finished" from="Fuyu/AnimatedSprite2D" to="Fuyu" method="update_animations"]
 [connection signal="timeout" from="UI/MagicPotionTimer" to="UI" method="_on_magic_potion_timer_timeout"]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cbk41e7n5bn7a"]
+
+[ext_resource type="Script" uid="uid://cpyopoxy43v7p" path="res://scripts/global/fighting.gd" id="1_htrw1"]
+[ext_resource type="Texture2D" uid="uid://dgb2e2syv0bf3" path="res://assets/objets/fire/Boule de Feu.png" id="2_osnhv"]
+
+[node name="Fight" type="Node2D" unique_id=1348902521]
+script = ExtResource("1_htrw1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=230466008]
+position = Vector2(263, 2)
+texture = ExtResource("2_osnhv")
+
+[node name="boule_de_feu" type="RayCast2D" parent="Sprite2D" unique_id=1700950717]
+target_position = Vector2(-1080, 0)

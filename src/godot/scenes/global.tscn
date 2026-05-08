@@ -325,7 +325,7 @@ current_tab = 0
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Control" type="Control" parent="." unique_id=502020183]
+[node name="UI" type="Control" parent="." unique_id=502020183]
 z_index = 3
 layout_mode = 3
 anchors_preset = 0
@@ -335,19 +335,19 @@ script = ExtResource("1_x8cda")
 full_heart_texture = ExtResource("2_5rvs8")
 empty_heart_texture = ExtResource("3_wokaa")
 
-[node name="mort" type="RayCast2D" parent="Control" unique_id=1691017041]
+[node name="mort" type="RayCast2D" parent="UI" unique_id=1691017041]
 position = Vector2(-3352, 900)
 target_position = Vector2(6580, 13)
 
-[node name="edelweiss" parent="Control" unique_id=389610 instance=ExtResource("13_2se67")]
+[node name="edelweiss" parent="UI" unique_id=389610 instance=ExtResource("13_2se67")]
 layout_mode = 0
 
-[node name="MagicPotionTimer" type="Timer" parent="Control" unique_id=134497970]
+[node name="MagicPotionTimer" type="Timer" parent="UI" unique_id=134497970]
 
-[node name="Dialogue" parent="Control" unique_id=1107674861 instance=ExtResource("15_e7lx3")]
+[node name="Dialogue" parent="UI" unique_id=1107674861 instance=ExtResource("15_e7lx3")]
 layout_mode = 1
 
-[node name="SOS Box" parent="Control" unique_id=1654785063 instance=ExtResource("16_3q7h5")]
+[node name="SOS Box" parent="UI" unique_id=1654785063 instance=ExtResource("16_3q7h5")]
 layout_mode = 1
 
-[connection signal="timeout" from="Control/MagicPotionTimer" to="Control" method="_on_magic_potion_timer_timeout"]
+[connection signal="timeout" from="UI/MagicPotionTimer" to="UI" method="_on_magic_potion_timer_timeout"]

@@ -5,6 +5,7 @@ extends Node
 @export var max_health: int = 5
 @export var current_health: int = 5
 @export var dial_running=false
+@export var dnd=false
 @export var help_box=false
 
 #Characters properties : tableau

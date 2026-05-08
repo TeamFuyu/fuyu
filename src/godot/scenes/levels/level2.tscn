@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://1i7116ufffsq" path="res://assets/personnages/être de feu/etre de feu_ferme_les_bras.png" id="6_dj4wq"]
 [ext_resource type="Texture2D" uid="uid://bj7naac6l2046" path="res://assets/personnages/être de feu/etre de feu_lamb.png" id="7_k0mew"]
 [ext_resource type="Script" uid="uid://c4lkfj7kcg4l" path="res://scripts/level2/être_de_feu.gd" id="8_b0vvs"]
-[ext_resource type="Texture2D" uid="uid://dgb2e2syv0bf3" path="res://assets/objets/fire/Boule de Feu.png" id="8_k0mew"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d5djh"]
 texture = ExtResource("2_71baw")
@@ -245,8 +244,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_dj4wq"]
-
 [node name="Level2" type="Node2D" unique_id=1179512100]
 script = ExtResource("1_niitk")
 next_scn_left = "res://scenes/levels/level1.tscn"
@@ -267,10 +264,3 @@ sprite_frames = SubResource("SpriteFrames_ida7w")
 animation = &"arms"
 autoplay = "idle"
 script = ExtResource("8_b0vvs")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=724632999]
-texture = ExtResource("8_k0mew")
-
-[node name="ShapeCast2D" type="ShapeCast2D" parent="Sprite2D" unique_id=1459311844]
-position = Vector2(-243, -84)
-shape = SubResource("CircleShape2D_dj4wq")

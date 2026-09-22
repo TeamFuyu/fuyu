@@ -1,19 +1,42 @@
 [gd_scene format=3 uid="uid://bmaa7dyddiqvg"]
 
-[ext_resource type="Texture2D" uid="uid://cqmdwc1uiqwo" path="res://assets/personnages/Queerel/Concepts & Palettes/Quirrel.png" id="1_4are2"]
+[ext_resource type="Script" uid="uid://bbgvqwwjufdmd" path="res://scripts/global/mob_behaviour.gd" id="1_4are2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bsing"]
 size = Vector2(83, 135)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_5730h"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"fight",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
 [node name="Mob" type="RigidBody2D" unique_id=1199340361]
 gravity_scale = 0.0
 linear_velocity = Vector2(-200, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=142494329]
-position = Vector2(-20, -20)
-scale = Vector2(0.7916667, 0.7916667)
-texture = ExtResource("1_4are2")
+script = ExtResource("1_4are2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=762253857]
 position = Vector2(-18.5, -25.5)
 shape = SubResource("RectangleShape2D_bsing")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=527416050]
+sprite_frames = SubResource("SpriteFrames_5730h")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1266439356]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

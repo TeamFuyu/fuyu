@@ -176,7 +176,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5uyp2")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attack",
 "speed": 10.0
 }, {
@@ -184,7 +184,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2se67")
 }],
-"loop": true,
+"loop": 1,
 "name": &"crouch",
 "speed": 6.0
 }, {
@@ -207,7 +207,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wafyw")
 }],
-"loop": true,
+"loop": 1,
 "name": &"crouch_walk",
 "speed": 6.0
 }, {
@@ -215,7 +215,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ckyir")
 }],
-"loop": false,
+"loop": 0,
 "name": &"dash",
 "speed": 1.0
 }, {
@@ -241,7 +241,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hnhgr")
 }],
-"loop": false,
+"loop": 0,
 "name": &"die",
 "speed": 6.0
 }, {
@@ -249,7 +249,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e3tlm")
 }],
-"loop": true,
+"loop": 1,
 "name": &"fall",
 "speed": 6.0
 }, {
@@ -275,7 +275,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_r4exh")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 6.0
 }, {
@@ -283,7 +283,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6g63k")
 }],
-"loop": false,
+"loop": 0,
 "name": &"jump",
 "speed": 6.0
 }, {
@@ -300,10 +300,12 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nr4ij")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk",
 "speed": 6.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5730h"]
 
 [node name="global_node" type="Node" unique_id=908086180]
 script = ExtResource("1_wokaa")
@@ -336,6 +338,9 @@ position = Vector2(2, -180)
 offset = Vector2(0, 40)
 
 [node name="DashTimer" type="Timer" parent="Fuyu" unique_id=416716633]
+
+[node name="MobCollisionShape" type="CollisionShape2D" parent="Fuyu" unique_id=1327566868]
+shape = SubResource("CapsuleShape2D_5730h")
 
 [node name="Window" type="Window" parent="." unique_id=1178512911]
 auto_translate_mode = 1
